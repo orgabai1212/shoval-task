@@ -21,7 +21,7 @@ docker run -d --name some-mysql --network backend  -v ./dump.sql:/docker-entrypo
 #docker run -d --name some-mysql -e MYSQL_ROOT_PASSWORD_FILE=root -e MYSQL_DATABASE=orgabay --network backend -v mysql-vol:/var/lib/mysql  doc-mysql 
 # -v ./mysql-vol:/vol
 
-docker run -d --name some-app --network backend --network frontend -p 5000:5000 -v ./app-vol:/vol doc-app
+docker run -d --name some-app --network backend --network frontend  -v ./app-vol:/vol doc-app
 
 docker run -d --name some-nginx --network frontend -p 80:80 -v ./default.conf:/etc/nginx/conf.d/default.conf -v ./nginx-vol:/vol nginx
 
