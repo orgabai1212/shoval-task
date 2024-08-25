@@ -9,7 +9,7 @@ docker image rm doc-mysql
 docker build -t  doc-app -f Dockerfile-app .
 docker build -t  doc-mysql -f Dockerfile-mysql .
 docker pull nginx
-docker puul mysql
+docker pull mysql
 
 docker network create backend
 docker network create frontend
